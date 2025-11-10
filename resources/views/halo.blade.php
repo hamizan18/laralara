@@ -8,6 +8,11 @@
 </head>
 
 <body>
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <h1>Daftar Produk</h1>
     <ul>
         @foreach($produk as $item)
