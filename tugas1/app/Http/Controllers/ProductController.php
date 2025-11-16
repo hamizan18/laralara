@@ -26,6 +26,6 @@ class ProductController extends Controller
             'deskripsi' => $request->deskripsi // mengambil data dari input deskripsi pada form
         ]); 
         
-        return redirect('/berhasil'); // setelah data disimpan, redirect ke halaman /produk dengan pesan sukses
+        return redirect('/berhasil'); // setelah data disimpan, redirect ke halaman /berhasil
     }
 }
