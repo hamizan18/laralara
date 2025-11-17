@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layouts.app')
+@section('content')
+
     <title>Form Input Data</title>
-</head>
-<body>
-    <h2>Input Data Mahasigma</h2>
-    
+
+    <a href="/dashboard">Back to Dashboard</a>
+
+    <center>
+        <h2>Input Data Mahasigma</h2>
+    </center>
+
     <form action="/mahasiswa" method="POST">
         @csrf
-        <label>Nama: </label><br>
-        <input type="text" name="nama"><br><br>
-        
-        <label">NIM: </label><br>
-        <input type="string" name="nim"><br><br>
-        
-        <label>Jurusan: </label><br>
-        <input type="text" name="jurusan"><br><br>
-        
-        <button type="submit">Save Data</button>
+            <label>Nama: </label><br>
+            <input type="text" name="nama" required><br><br>
+
+            <label>NIM: </label><br>
+            <input type="number" name="nim" required><br><br>
+
+            <label>Jurusan: </label><br>
+            <input type="text" name="jurusan" required><br><br>
+
+            <button type="submit">Save Data</button>
     </form>
 
-</body>
-</html>
+    @endsection

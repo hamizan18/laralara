@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('nim')->unique();
             $table->string('jurusan');
+            $table->string('role')->default('user');
             $table->timestamps();
         });
     }
